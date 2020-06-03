@@ -1,0 +1,4 @@
+IconInfo     Bitmap   info.bmp
+IconConfirm  Bitmap   confirm.bmp
+IconWarn     Bitmap   warn.bmp
+IconError    Bitmap   error.bmp
