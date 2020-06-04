@@ -4,16 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, RzDlgBtn, StdCtrls, RzEdit, RzBckgnd, RzLabel;
+  ExtCtrls, StdCtrls, Vcl.Buttons;
 
 type
   TfrmNewMessageDlg = class(TForm)
-    lblGrabber: TRzLabel;
-    rzBackground: TRzBackground;
     imgDlgIcon: TImage;
-    rzDlgButtons: TRzDialogButtons;
-    rzBtnBarBackground: TRzBackground;
-    lblMessage: TRzLabel;
+    lblGrab: TLabel;
+    lblMessage: TLabel;
+    btnOK: TBitBtn;
+    btnCancel: TBitBtn;
     procedure rzDlgButtonsClickOk(Sender: TObject);
     procedure rzDlgButtonsClick(Sender: TObject);
   public
@@ -51,22 +50,22 @@ begin
   case NewIcon of
     mtWarning:
     begin
-      lblGrabber.Caption := 'Hey Dude, Watch out!';
+      lblGrab.Caption := 'Hey Dude, Watch out!';
       imgDlgIcon.Picture.Bitmap.LoadFromResourceName(HInstance, 'IconWarn');
     end;
     mtError:
     begin
-      lblGrabber.Caption := 'Whoa! Now THAT''S an error!';
+      lblGrab.Caption := 'Whoa! Now THAT''S an error!';
       imgDlgIcon.Picture.Bitmap.LoadFromResourceName(HInstance, 'IconError');
     end;
     mtInformation:
     begin
-      lblGrabber.Caption := 'Here''s something to chew on.';
+      lblGrab.Caption := 'Here''s something to chew on.';
       imgDlgIcon.Picture.Bitmap.LoadFromResourceName(HInstance, 'IconInfo');
     end;
     mtConfirmation:
     begin
-      lblGrabber.Caption := 'Be sure.  Be VERY sure.';
+      lblGrab.Caption := 'Be sure.  Be VERY sure.';
       imgDlgIcon.Picture.Bitmap.LoadFromResourceName(HInstance, 'IconConfirm');
     end;
   end;
