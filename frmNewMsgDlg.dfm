@@ -3,8 +3,8 @@ object frmNewMessageDlg: TfrmNewMessageDlg
   Top = 238
   BorderIcons = []
   BorderStyle = bsToolWindow
-  ClientHeight = 131
-  ClientWidth = 360
+  ClientHeight = 185
+  ClientWidth = 374
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,40 +16,6 @@ object frmNewMessageDlg: TfrmNewMessageDlg
   Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
-  object rzBackground: TRzBackground
-    Left = 0
-    Top = 0
-    Width = 360
-    Height = 95
-    Active = True
-    Align = alClient
-    GradientColorStart = clBlack
-    GradientColorStop = clRed
-    GradientDirection = gdVerticalEnd
-    ImageStyle = isCenter
-    ShowGradient = True
-    ShowImage = False
-    ShowTexture = False
-  end
-  object lblGrabber: TRzLabel
-    Left = 80
-    Top = 8
-    Width = 273
-    Height = 24
-    AutoSize = False
-    Caption = 'lblGrabber'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clYellow
-    Font.Height = -19
-    Font.Name = 'MS Sans Serif'
-    Font.Style = [fsUnderline]
-    ParentFont = False
-    Transparent = True
-    BevelWidth = 0
-    FrameSides = []
-    ShadowColor = clTeal
-    TextStyle = tsShadow
-  end
   object imgDlgIcon: TImage
     Left = 8
     Top = 8
@@ -57,52 +23,42 @@ object frmNewMessageDlg: TfrmNewMessageDlg
     Height = 57
     Center = True
   end
-  object lblMessage: TRzLabel
-    Left = 80
-    Top = 40
-    Width = 273
-    Height = 49
-    AutoSize = False
-    Caption = 'lblMessage'
+  object lblGrab: TLabel
+    Left = 96
+    Top = 24
+    Width = 134
+    Height = 20
+    Caption = 'what goes here?'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWhite
+    Font.Color = clWindowText
     Font.Height = -16
     Font.Name = 'MS Sans Serif'
-    Font.Style = []
+    Font.Style = [fsBold, fsUnderline]
     ParentFont = False
-    Transparent = True
-    WordWrap = True
-    FrameSides = []
-    TextStyle = tsNormal
   end
-  object rzDlgButtons: TRzDialogButtons
-    Left = 0
-    Top = 95
-    Width = 360
-    CaptionOk = 'OK'
-    CaptionCancel = 'Cancel'
-    CaptionHelp = 'Help'
-    EnableOk = True
-    EnableCancel = True
-    EnableHelp = False
-    FrameFlat = True
-    OnClickOk = rzDlgButtonsClickOk
+  object lblMessage: TLabel
+    Left = 96
+    Top = 50
+    Width = 33
+    Height = 13
+    Caption = 'subtitle'
+  end
+  object btnOK: TBitBtn
+    Left = 96
+    Top = 96
+    Width = 75
+    Height = 25
+    Kind = bkOK
+    NumGlyphs = 2
     TabOrder = 0
-    OnClick = rzDlgButtonsClick
-    object rzBtnBarBackground: TRzBackground
-      Left = 0
-      Top = 0
-      Width = 360
-      Height = 36
-      Active = True
-      Align = alClient
-      GradientColorStart = clBlack
-      GradientColorStop = clRed
-      GradientDirection = gdVerticalEnd
-      ImageStyle = isCenter
-      ShowGradient = True
-      ShowImage = False
-      ShowTexture = False
-    end
+  end
+  object btnCancel: TBitBtn
+    Left = 185
+    Top = 96
+    Width = 75
+    Height = 25
+    Kind = bkCancel
+    NumGlyphs = 2
+    TabOrder = 1
   end
 end
